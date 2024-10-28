@@ -1,0 +1,1056 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>material-dashboard-angular documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">material-dashboard-angular documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  AddDonationComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/add-donator/add-donator.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-add-donator</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./add-donator.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./add-donator.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#donatedForOptions" >donatedForOptions</a>
+                            </li>
+                            <li>
+                                <a href="#newRow" >newRow</a>
+                            </li>
+                            <li>
+                                <a href="#parashot" >parashot</a>
+                            </li>
+                            <li>
+                                <a href="#years" >years</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addDonation" >addDonation</a>
+                            </li>
+                            <li>
+                                <a href="#formatDate" >formatDate</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#resetForm" >resetForm</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#donationAdded" >donationAdded</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(router: Router, dataService: <a href="../injectables/DataService.html" target="_self">DataService</a>, cdRef: ChangeDetectorRef)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/add-donator/add-donator.component.ts:48</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code>Router</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>dataService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DataService.html" target="_self" >DataService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cdRef</td>
+                                                  
+                                                        <td>
+                                                                    <code>ChangeDetectorRef</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section data-compodoc="block-outputs">
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="donationAdded"></a>
+                        <b>donationAdded</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/add-donator/add-donator.component.ts:11</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addDonation"></a>
+                    <span class="name">
+                        <span ><b>addDonation</b></span>
+                        <a href="#addDonation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addDonation()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="56"
+                                    class="link-to-prism">src/app/add-donator/add-donator.component.ts:56</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formatDate"></a>
+                    <span class="name">
+                        <span ><b>formatDate</b></span>
+                        <a href="#formatDate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>formatDate(date: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="87"
+                                    class="link-to-prism">src/app/add-donator/add-donator.component.ts:87</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>date</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="52"
+                                    class="link-to-prism">src/app/add-donator/add-donator.component.ts:52</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="resetForm"></a>
+                    <span class="name">
+                        <span ><b>resetForm</b></span>
+                        <a href="#resetForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>resetForm()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="94"
+                                    class="link-to-prism">src/app/add-donator/add-donator.component.ts:94</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="donatedForOptions"></a>
+                    <span class="name">
+                        <span ><b>donatedForOptions</b></span>
+                        <a href="#donatedForOptions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    &#x27;פתיחת ההיכל&#x27;, &#x27;הוצאה והגבהה&#x27;, &#x27;הוצאה והגבהה 2&#x27;, &#x27;רימונים&#x27;, &#x27;כהן&#x27;, &#x27;לוי&#x27;, &#x27;ראשון&#x27;, &#x27;שני&#x27;,
+    &#x27;שלישי&#x27;, &#x27;רביעי&#x27;, &#x27;חמישי&#x27;, &#x27;שישי&#x27;, &#x27;שביעי&#x27;, &#x27;מפטיר&#x27;, &#x27;עלייה כללי&#x27;, &#x27;כל המצוות מנחה&#x27;,
+    &#x27;פתיחת ההיכל ר&quot;ה&#x27;, &#x27;הוצאה והגבהה ר&quot;ה&#x27;, &#x27;הוצאה והגבהה 2 ר&quot;ה&#x27;, &#x27;ראשון - ר&quot;ה&#x27;, &#x27;שני - ר&quot;ה&#x27;,
+    &#x27;שלישי - ר&quot;ה&#x27;, &#x27;רביעי - ר&quot;ה&#x27;, &#x27;חמישי - ר&quot;ה&#x27;, &#x27;שישי שבת ר&quot;ה&#x27;, &#x27;שביעי שבת ר&quot;ה&#x27;, &#x27;מוסיף-ר&quot;ה&#x27;, &#x27;מפטיר - ר&quot;ה&#x27;,
+    &#x27;עלייה כללי ר&quot;ה&#x27;, &#x27;כהן - ר&quot;ה&#x27;, &#x27;לוי - ר&quot;ה&#x27;, &#x27;פתיחה - פרנסה&#x27;, &#x27;פתיחה כל נדרי&#x27;, &#x27;כל נדרי&#x27;,
+    &#x27;הולכת ס&quot;ת - כיפור&#x27;, &#x27;הולכת ס&quot;ת 2 - כיפור&#x27;, &#x27;פתיחה סדר העבודה - כיפור&#x27;, &#x27;פתיחה - כיפור&#x27;,
+    &#x27;פתיחה נעילה - כיפור&#x27;, &#x27;פעמוני ספר תורה&#x27;, &#x27;כהן - כיפור&#x27;, &#x27;לוי - כיפור&#x27;, &#x27;ראשון - כיפור&#x27;,
+    &#x27;שני - כיפור&#x27;, &#x27;שלישי - כיפור&#x27;, &#x27;רביעי - כיפור&#x27;, &#x27;חמישי - כיפור&#x27;, &#x27;שישי - כיפור&#x27;, &#x27;מפטיר - כיפור&#x27;,
+    &#x27;מוסיף-כיפור&#x27;, &#x27;עלייה כללי - כיפור&#x27;, &#x27;נדבה לנפטרים&#x27;, &#x27;הקפה 1-ש&quot;ת&#x27;, &#x27;הקפה 2-ש&quot;ת&#x27;, &#x27;הקפה 3-ש&quot;ת&#x27;,
+    &#x27;הקפה 4-ש&quot;ת&#x27;, &#x27;הקפה 5-ש&quot;ת&#x27;, &#x27;הקפה 6-ש&quot;ת&#x27;, &#x27;הקפה 7-ש&quot;ת&#x27;, &#x27;הקפה-ש&quot;ת&#x27;, &#x27;מוסיף-ש&quot;ת&#x27;, &#x27;חזן ימים נוראים&#x27;,
+    &#x27;תרומה כללית&#x27;, &#x27;שמן נר ראשון&#x27;, &#x27;שמן נר שני&#x27;, &#x27;שמן נר שלישי&#x27;, &#x27;שמן נר רביעי&#x27;, &#x27;שמן נר חמישי&#x27;,
+    &#x27;שמן נר שישי&#x27;, &#x27;שמן נר שביעי&#x27;, &#x27;שמן נר שמיני&#x27;, &#x27;כל המצוות סוכות&#x27;, &#x27;שמן למאור&#x27;, &#x27;מתמידים&#x27;,
+    &#x27;כל המצוות חול&#x27;, &#x27;אבות ובנים&#x27;, &#x27;ברכת השנה&#x27;, &#x27;כל המצוות פסח&#x27;, &#x27;הדלקה ל&quot;ג בעומר&#x27;, &#x27;ישיבת אבות ובנים&#x27;,
+    &#x27;כל המצוות צום גדליה&#x27;, &#x27;הוצאה כל נדרי 1&#x27;, &#x27;הוצאה כל נדרי 2&#x27;, &#x27;הוצאה כל נדרי 3&#x27;, &#x27;ע&quot;נ נפטרים - כיפור&#x27;
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/add-donator/add-donator.component.ts:23</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="newRow"></a>
+                    <span class="name">
+                        <span ><b>newRow</b></span>
+                        <a href="#newRow"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+    donorName: &#x27;&#x27;,
+    donatedFor: this.donatedForOptions[0],
+    year: this.years[0],
+    parashaName: this.parashot[0],
+    pledgeAmount: null,
+    datePledged: &#x27;&#x27;,
+    remarks: &#x27;&#x27;
+  }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/add-donator/add-donator.component.ts:40</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="parashot"></a>
+                    <span class="name">
+                        <span ><b>parashot</b></span>
+                        <a href="#parashot"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    &#x27;בראשית&#x27;, &#x27;נח&#x27;, &#x27;לך לך&#x27;, &#x27;וירא&#x27;, &#x27;חיי שרה&#x27;, &#x27;תולדות&#x27;, &#x27;ויצא&#x27;, &#x27;וישלח&#x27;, &#x27;וישב&#x27;, &#x27;מקץ&#x27;, &#x27;ויגש&#x27;, &#x27;ויחי&#x27;,
+    &#x27;שמות&#x27;, &#x27;וארא&#x27;, &#x27;בא&#x27;, &#x27;בשלח&#x27;, &#x27;יתרו&#x27;, &#x27;משפטים&#x27;, &#x27;תרומה&#x27;, &#x27;תצוה&#x27;, &#x27;כי תשא&#x27;, &#x27;ויקהל&#x27;, &#x27;פקודי&#x27;, &#x27;ויקהל-פקודי&#x27;,
+    &#x27;ויקרא&#x27;, &#x27;צו&#x27;, &#x27;שמיני&#x27;, &#x27;תזריע&#x27;, &#x27;מצורע&#x27;, &#x27;תזריע-מצורע&#x27;, &#x27;אחרי מות&#x27;, &#x27;קדושים&#x27;, &#x27;אחרי מות-קדושים&#x27;, &#x27;אמור&#x27;, &#x27;בהר&#x27;, &#x27;בחוקותי&#x27;, &#x27;בהר-בחוקותי&#x27;,
+    &#x27;במדבר&#x27;, &#x27;נשא&#x27;, &#x27;בהעלותך&#x27;, &#x27;שלח&#x27;, &#x27;קורח&#x27;, &#x27;חוקת&#x27;, &#x27;בלק&#x27;, &#x27;פינחס&#x27;, &#x27;מטות&#x27;, &#x27;מסעי&#x27;, &#x27;מטות-מסעי&#x27;,
+    &#x27;דברים&#x27;, &#x27;ואתחנן&#x27;, &#x27;עקב&#x27;, &#x27;ראה&#x27;, &#x27;שופטים&#x27;, &#x27;כי תצא&#x27;, &#x27;כי תבוא&#x27;, &#x27;ניצבים&#x27;, &#x27;וילך&#x27;, &#x27;ניצבים-וילך&#x27;, &#x27;האזינו&#x27;, &#x27;וזאת הברכה&#x27;,
+    &#x27;ראש השנה&#x27;, &#x27;יום הכיפורים&#x27;, &#x27;סוכות&#x27;, &#x27;חוה&quot;מ סוכות&#x27;, &#x27;שמחת תורה&#x27;, &#x27;חנוכה&#x27;, &#x27;פורים&#x27;, &#x27;פסח ראשון&#x27;, &#x27;חוה&quot;מ פסח&#x27;, &#x27;שביעי של פסח&#x27;, &#x27;שבועות&#x27;, &#x27;תשעה באב&#x27;, &#x27;צום גדליה&#x27;, &#x27;לג בעומר&#x27;, &#x27;ערב פסח&#x27;
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/add-donator/add-donator.component.ts:14</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="years"></a>
+                    <span class="name">
+                        <span ><b>years</b></span>
+                        <a href="#years"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[&#x27;תשפ&quot;ב&#x27;, &#x27;תשפ&quot;ג&#x27;, &#x27;תשפ&quot;ד&#x27;, &#x27;תשפ&quot;ה&#x27;, &#x27;תשפ&quot;ו&#x27;, &#x27;תשפ&quot;ז&#x27;, &#x27;תשפ&quot;ח&#x27;]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/add-donator/add-donator.component.ts:13</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ChangeDetectorRef, Component, EventEmitter, OnInit, Output } from &#x27;@angular/core&#x27;;
+import { DataService } from &#x27;../data.service&#x27;; // Adjust the import path as necessary
+import { Router } from &#x27;@angular/router&#x27;;
+
+@Component({
+  selector: &#x27;app-add-donator&#x27;,
+  templateUrl: &#x27;./add-donator.component.html&#x27;,
+  styleUrls: [&#x27;./add-donator.component.scss&#x27;]
+})
+export class AddDonationComponent implements OnInit {
+  @Output() donationAdded &#x3D; new EventEmitter&lt;boolean&gt;();  // Emit a boolean for success/failure
+
+  years &#x3D; [&#x27;תשפ&quot;ב&#x27;, &#x27;תשפ&quot;ג&#x27;, &#x27;תשפ&quot;ד&#x27;, &#x27;תשפ&quot;ה&#x27;, &#x27;תשפ&quot;ו&#x27;, &#x27;תשפ&quot;ז&#x27;, &#x27;תשפ&quot;ח&#x27;];
+  parashot &#x3D; [
+    &#x27;בראשית&#x27;, &#x27;נח&#x27;, &#x27;לך לך&#x27;, &#x27;וירא&#x27;, &#x27;חיי שרה&#x27;, &#x27;תולדות&#x27;, &#x27;ויצא&#x27;, &#x27;וישלח&#x27;, &#x27;וישב&#x27;, &#x27;מקץ&#x27;, &#x27;ויגש&#x27;, &#x27;ויחי&#x27;,
+    &#x27;שמות&#x27;, &#x27;וארא&#x27;, &#x27;בא&#x27;, &#x27;בשלח&#x27;, &#x27;יתרו&#x27;, &#x27;משפטים&#x27;, &#x27;תרומה&#x27;, &#x27;תצוה&#x27;, &#x27;כי תשא&#x27;, &#x27;ויקהל&#x27;, &#x27;פקודי&#x27;, &#x27;ויקהל-פקודי&#x27;,
+    &#x27;ויקרא&#x27;, &#x27;צו&#x27;, &#x27;שמיני&#x27;, &#x27;תזריע&#x27;, &#x27;מצורע&#x27;, &#x27;תזריע-מצורע&#x27;, &#x27;אחרי מות&#x27;, &#x27;קדושים&#x27;, &#x27;אחרי מות-קדושים&#x27;, &#x27;אמור&#x27;, &#x27;בהר&#x27;, &#x27;בחוקותי&#x27;, &#x27;בהר-בחוקותי&#x27;,
+    &#x27;במדבר&#x27;, &#x27;נשא&#x27;, &#x27;בהעלותך&#x27;, &#x27;שלח&#x27;, &#x27;קורח&#x27;, &#x27;חוקת&#x27;, &#x27;בלק&#x27;, &#x27;פינחס&#x27;, &#x27;מטות&#x27;, &#x27;מסעי&#x27;, &#x27;מטות-מסעי&#x27;,
+    &#x27;דברים&#x27;, &#x27;ואתחנן&#x27;, &#x27;עקב&#x27;, &#x27;ראה&#x27;, &#x27;שופטים&#x27;, &#x27;כי תצא&#x27;, &#x27;כי תבוא&#x27;, &#x27;ניצבים&#x27;, &#x27;וילך&#x27;, &#x27;ניצבים-וילך&#x27;, &#x27;האזינו&#x27;, &#x27;וזאת הברכה&#x27;,
+    &#x27;ראש השנה&#x27;, &#x27;יום הכיפורים&#x27;, &#x27;סוכות&#x27;, &#x27;חוה&quot;מ סוכות&#x27;, &#x27;שמחת תורה&#x27;, &#x27;חנוכה&#x27;, &#x27;פורים&#x27;, &#x27;פסח ראשון&#x27;, &#x27;חוה&quot;מ פסח&#x27;, &#x27;שביעי של פסח&#x27;, &#x27;שבועות&#x27;, &#x27;תשעה באב&#x27;, &#x27;צום גדליה&#x27;, &#x27;לג בעומר&#x27;, &#x27;ערב פסח&#x27;
+  ];
+
+  donatedForOptions &#x3D; [
+    &#x27;פתיחת ההיכל&#x27;, &#x27;הוצאה והגבהה&#x27;, &#x27;הוצאה והגבהה 2&#x27;, &#x27;רימונים&#x27;, &#x27;כהן&#x27;, &#x27;לוי&#x27;, &#x27;ראשון&#x27;, &#x27;שני&#x27;,
+    &#x27;שלישי&#x27;, &#x27;רביעי&#x27;, &#x27;חמישי&#x27;, &#x27;שישי&#x27;, &#x27;שביעי&#x27;, &#x27;מפטיר&#x27;, &#x27;עלייה כללי&#x27;, &#x27;כל המצוות מנחה&#x27;,
+    &#x27;פתיחת ההיכל ר&quot;ה&#x27;, &#x27;הוצאה והגבהה ר&quot;ה&#x27;, &#x27;הוצאה והגבהה 2 ר&quot;ה&#x27;, &#x27;ראשון - ר&quot;ה&#x27;, &#x27;שני - ר&quot;ה&#x27;,
+    &#x27;שלישי - ר&quot;ה&#x27;, &#x27;רביעי - ר&quot;ה&#x27;, &#x27;חמישי - ר&quot;ה&#x27;, &#x27;שישי שבת ר&quot;ה&#x27;, &#x27;שביעי שבת ר&quot;ה&#x27;, &#x27;מוסיף-ר&quot;ה&#x27;, &#x27;מפטיר - ר&quot;ה&#x27;,
+    &#x27;עלייה כללי ר&quot;ה&#x27;, &#x27;כהן - ר&quot;ה&#x27;, &#x27;לוי - ר&quot;ה&#x27;, &#x27;פתיחה - פרנסה&#x27;, &#x27;פתיחה כל נדרי&#x27;, &#x27;כל נדרי&#x27;,
+    &#x27;הולכת ס&quot;ת - כיפור&#x27;, &#x27;הולכת ס&quot;ת 2 - כיפור&#x27;, &#x27;פתיחה סדר העבודה - כיפור&#x27;, &#x27;פתיחה - כיפור&#x27;,
+    &#x27;פתיחה נעילה - כיפור&#x27;, &#x27;פעמוני ספר תורה&#x27;, &#x27;כהן - כיפור&#x27;, &#x27;לוי - כיפור&#x27;, &#x27;ראשון - כיפור&#x27;,
+    &#x27;שני - כיפור&#x27;, &#x27;שלישי - כיפור&#x27;, &#x27;רביעי - כיפור&#x27;, &#x27;חמישי - כיפור&#x27;, &#x27;שישי - כיפור&#x27;, &#x27;מפטיר - כיפור&#x27;,
+    &#x27;מוסיף-כיפור&#x27;, &#x27;עלייה כללי - כיפור&#x27;, &#x27;נדבה לנפטרים&#x27;, &#x27;הקפה 1-ש&quot;ת&#x27;, &#x27;הקפה 2-ש&quot;ת&#x27;, &#x27;הקפה 3-ש&quot;ת&#x27;,
+    &#x27;הקפה 4-ש&quot;ת&#x27;, &#x27;הקפה 5-ש&quot;ת&#x27;, &#x27;הקפה 6-ש&quot;ת&#x27;, &#x27;הקפה 7-ש&quot;ת&#x27;, &#x27;הקפה-ש&quot;ת&#x27;, &#x27;מוסיף-ש&quot;ת&#x27;, &#x27;חזן ימים נוראים&#x27;,
+    &#x27;תרומה כללית&#x27;, &#x27;שמן נר ראשון&#x27;, &#x27;שמן נר שני&#x27;, &#x27;שמן נר שלישי&#x27;, &#x27;שמן נר רביעי&#x27;, &#x27;שמן נר חמישי&#x27;,
+    &#x27;שמן נר שישי&#x27;, &#x27;שמן נר שביעי&#x27;, &#x27;שמן נר שמיני&#x27;, &#x27;כל המצוות סוכות&#x27;, &#x27;שמן למאור&#x27;, &#x27;מתמידים&#x27;,
+    &#x27;כל המצוות חול&#x27;, &#x27;אבות ובנים&#x27;, &#x27;ברכת השנה&#x27;, &#x27;כל המצוות פסח&#x27;, &#x27;הדלקה ל&quot;ג בעומר&#x27;, &#x27;ישיבת אבות ובנים&#x27;,
+    &#x27;כל המצוות צום גדליה&#x27;, &#x27;הוצאה כל נדרי 1&#x27;, &#x27;הוצאה כל נדרי 2&#x27;, &#x27;הוצאה כל נדרי 3&#x27;, &#x27;ע&quot;נ נפטרים - כיפור&#x27;
+  ];
+
+  newRow &#x3D; {
+    donorName: &#x27;&#x27;,
+    donatedFor: this.donatedForOptions[0],
+    year: this.years[0],
+    parashaName: this.parashot[0],
+    pledgeAmount: null,
+    datePledged: &#x27;&#x27;,
+    remarks: &#x27;&#x27;
+  };
+
+  constructor(private router: Router, private dataService: DataService, private cdRef: ChangeDetectorRef) {}
+
+  ngOnInit(): void {
+    console.log(&quot;AddDonatorComponent Initialized&quot;);
+  }
+
+  addDonation() {
+    // Format date before submission
+    if (this.newRow.datePledged) {
+      const inputDate &#x3D; new Date(this.newRow.datePledged);
+      if (!isNaN(inputDate.getTime())) {
+        const formattedDate &#x3D; this.formatDate(inputDate);
+        this.newRow.datePledged &#x3D; formattedDate;
+      } else {
+        alert(&#x27;Invalid date provided.&#x27;);
+        return;
+      }
+    }
+
+    const donationWithYear &#x3D; {
+      ...this.newRow,
+      parashaName: &#x60;${this.newRow.parashaName} ${this.newRow.year}&#x60;
+    };
+
+    this.dataService.addNewRecord(donationWithYear).subscribe({
+      next: (res) &#x3D;&gt; {
+        alert(res.message || &#x27;Donation added successfully!&#x27;);
+        this.resetForm();
+        this.donationAdded.emit(true);  // Emit success event
+      },
+      error: () &#x3D;&gt; {
+        alert(&#x27;Error occurred while adding donation.&#x27;);
+        this.donationAdded.emit(false);  // Emit failure event
+      }
+    });
+  }
+
+  formatDate(date: Date): string {
+    const day &#x3D; (&#x27;0&#x27; + date.getDate()).slice(-2);
+    const month &#x3D; (&#x27;0&#x27; + (date.getMonth() + 1)).slice(-2);
+    const year &#x3D; date.getFullYear();
+    return &#x60;${year}-${month}-${day}&#x60;;
+  }
+
+  resetForm() {
+    this.newRow &#x3D; {
+      donorName: &#x27;&#x27;,
+      donatedFor: this.donatedForOptions[0],
+      year: this.years[0],
+      parashaName: this.parashot[0],
+      pledgeAmount: null,
+      datePledged: &#x27;&#x27;,
+      remarks: &#x27;&#x27;
+    };
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;custom-modal-body&quot;&gt;
+  &lt;!-- Use (ngSubmit) to bind the form submission to the Angular component --&gt;
+  &lt;form #donationForm&#x3D;&quot;ngForm&quot; (ngSubmit)&#x3D;&quot;addDonation()&quot; class&#x3D;&quot;form&quot;&gt;
+    &lt;!-- Form Fields --&gt;
+    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+      &lt;label for&#x3D;&quot;donatedForSelect&quot;&gt;בחר מהות הנדר&lt;/label&gt;
+      &lt;select [(ngModel)]&#x3D;&quot;newRow.donatedFor&quot; id&#x3D;&quot;donatedForSelect&quot; class&#x3D;&quot;form-control&quot; name&#x3D;&quot;donatedFor&quot; required&gt;
+        &lt;option value&#x3D;&quot;&quot; disabled selected hidden&gt;בחר מהות הנדר&lt;/option&gt;
+        &lt;option *ngFor&#x3D;&quot;let option of donatedForOptions&quot; [value]&#x3D;&quot;option&quot;&gt;{{ option }}&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;div *ngIf&#x3D;&quot;donationForm.submitted &amp;&amp; donationForm.controls[&#x27;donatedFor&#x27;]?.invalid&quot; class&#x3D;&quot;text-danger&quot;&gt;
+        מהות הנדר היא שדה חובה
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+      &lt;label for&#x3D;&quot;donorName&quot;&gt;שם התורם&lt;/label&gt;
+      &lt;input [(ngModel)]&#x3D;&quot;newRow.donorName&quot; id&#x3D;&quot;donorName&quot; type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; name&#x3D;&quot;donorName&quot; required&gt;
+      &lt;div *ngIf&#x3D;&quot;donationForm.submitted &amp;&amp; donationForm.controls[&#x27;donorName&#x27;]?.invalid&quot; class&#x3D;&quot;text-danger&quot;&gt;
+        שם התורם הוא שדה חובה
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+      &lt;label for&#x3D;&quot;parashaSelect&quot;&gt;בחר פרשה&lt;/label&gt;
+      &lt;select [(ngModel)]&#x3D;&quot;newRow.parashaName&quot; id&#x3D;&quot;parashaSelect&quot; class&#x3D;&quot;form-control&quot; name&#x3D;&quot;parashaName&quot; required&gt;
+        &lt;option value&#x3D;&quot;&quot; disabled selected hidden&gt;בחר פרשה&lt;/option&gt;
+        &lt;option *ngFor&#x3D;&quot;let parashaName of parashot&quot; [value]&#x3D;&quot;parashaName&quot;&gt;{{ parashaName }}&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;div *ngIf&#x3D;&quot;donationForm.submitted &amp;&amp; donationForm.controls[&#x27;parashaName&#x27;]?.invalid&quot; class&#x3D;&quot;text-danger&quot;&gt;
+        שם הפרשה הוא שדה חובה
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+      &lt;label for&#x3D;&quot;yearSelect&quot;&gt;בחר שנה&lt;/label&gt;
+      &lt;select [(ngModel)]&#x3D;&quot;newRow.year&quot; id&#x3D;&quot;yearSelect&quot; class&#x3D;&quot;form-control&quot; name&#x3D;&quot;year&quot; required&gt;
+        &lt;option value&#x3D;&quot;&quot; disabled selected hidden&gt;בחר שנה&lt;/option&gt;
+        &lt;option *ngFor&#x3D;&quot;let year of years&quot; [value]&#x3D;&quot;year&quot;&gt;{{ year }}&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;div *ngIf&#x3D;&quot;donationForm.submitted &amp;&amp; donationForm.controls[&#x27;year&#x27;]?.invalid&quot; class&#x3D;&quot;text-danger&quot;&gt;
+        שנה היא שדה חובה
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+      &lt;label for&#x3D;&quot;pledgeAmount&quot;&gt;סכום הנדר&lt;/label&gt;
+      &lt;input [(ngModel)]&#x3D;&quot;newRow.pledgeAmount&quot; id&#x3D;&quot;pledgeAmount&quot; type&#x3D;&quot;number&quot; class&#x3D;&quot;form-control&quot; name&#x3D;&quot;pledgeAmount&quot; required&gt;
+      &lt;div *ngIf&#x3D;&quot;donationForm.submitted &amp;&amp; donationForm.controls[&#x27;pledgeAmount&#x27;]?.invalid&quot; class&#x3D;&quot;text-danger&quot;&gt;
+        סכום הנדר הוא שדה חובה
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+      &lt;label for&#x3D;&quot;pledgeDate&quot;&gt;תאריך הנדר&lt;/label&gt;
+      &lt;input [(ngModel)]&#x3D;&quot;newRow.datePledged&quot; id&#x3D;&quot;pledgeDate&quot; type&#x3D;&quot;date&quot; class&#x3D;&quot;form-control&quot; name&#x3D;&quot;datePledged&quot; required&gt;
+      &lt;div *ngIf&#x3D;&quot;donationForm.submitted &amp;&amp; donationForm.controls[&#x27;datePledged&#x27;]?.invalid&quot; class&#x3D;&quot;text-danger&quot;&gt;
+        תאריך הנדר הוא שדה חובה
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+      &lt;label for&#x3D;&quot;notes&quot;&gt;הערות&lt;/label&gt;
+      &lt;textarea [(ngModel)]&#x3D;&quot;newRow.remarks&quot; id&#x3D;&quot;notes&quot; class&#x3D;&quot;form-control&quot; name&#x3D;&quot;remarks&quot;&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;form-actions&quot;&gt;
+      &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary&quot; [disabled]&#x3D;&quot;!donationForm.valid&quot;&gt;הוספת תרומה&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./add-donator.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.custom-modal.fade {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.custom-modal.show {
+  opacity: 1;
+  display: block;
+  z-index: 1055;
+}
+
+.custom-modal-dialog {
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto;
+  transform: translateY(-100px);
+  transition: transform 0.3s ease-out;
+}
+
+.custom-modal.show .custom-modal-dialog {
+  transform: translateY(0);
+}
+
+.custom-modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.custom-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-modal-body {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 15px;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="custom-modal-body">  <!-- Use (ngSubmit) to bind the form submission to the Angular component -->  <form #donationForm="ngForm" (ngSubmit)="addDonation()" class="form">    <!-- Form Fields -->    <div class="form-group">      <label for="donatedForSelect">בחר מהות הנדר</label>      <select [(ngModel)]="newRow.donatedFor" id="donatedForSelect" class="form-control" name="donatedFor" required>        <option value="" disabled selected hidden>בחר מהות הנדר</option>        <option *ngFor="let option of donatedForOptions" [value]="option">{{ option }}</option>      </select>      <div *ngIf="donationForm.submitted && donationForm.controls[\'donatedFor\']?.invalid" class="text-danger">        מהות הנדר היא שדה חובה      </div>    </div>    <div class="form-group">      <label for="donorName">שם התורם</label>      <input [(ngModel)]="newRow.donorName" id="donorName" type="text" class="form-control" name="donorName" required>      <div *ngIf="donationForm.submitted && donationForm.controls[\'donorName\']?.invalid" class="text-danger">        שם התורם הוא שדה חובה      </div>    </div>    <div class="form-group">      <label for="parashaSelect">בחר פרשה</label>      <select [(ngModel)]="newRow.parashaName" id="parashaSelect" class="form-control" name="parashaName" required>        <option value="" disabled selected hidden>בחר פרשה</option>        <option *ngFor="let parashaName of parashot" [value]="parashaName">{{ parashaName }}</option>      </select>      <div *ngIf="donationForm.submitted && donationForm.controls[\'parashaName\']?.invalid" class="text-danger">        שם הפרשה הוא שדה חובה      </div>    </div>    <div class="form-group">      <label for="yearSelect">בחר שנה</label>      <select [(ngModel)]="newRow.year" id="yearSelect" class="form-control" name="year" required>        <option value="" disabled selected hidden>בחר שנה</option>        <option *ngFor="let year of years" [value]="year">{{ year }}</option>      </select>      <div *ngIf="donationForm.submitted && donationForm.controls[\'year\']?.invalid" class="text-danger">        שנה היא שדה חובה      </div>    </div>    <div class="form-group">      <label for="pledgeAmount">סכום הנדר</label>      <input [(ngModel)]="newRow.pledgeAmount" id="pledgeAmount" type="number" class="form-control" name="pledgeAmount" required>      <div *ngIf="donationForm.submitted && donationForm.controls[\'pledgeAmount\']?.invalid" class="text-danger">        סכום הנדר הוא שדה חובה      </div>    </div>    <div class="form-group">      <label for="pledgeDate">תאריך הנדר</label>      <input [(ngModel)]="newRow.datePledged" id="pledgeDate" type="date" class="form-control" name="datePledged" required>      <div *ngIf="donationForm.submitted && donationForm.controls[\'datePledged\']?.invalid" class="text-danger">        תאריך הנדר הוא שדה חובה      </div>    </div>    <div class="form-group">      <label for="notes">הערות</label>      <textarea [(ngModel)]="newRow.remarks" id="notes" class="form-control" name="remarks"></textarea>    </div>    <div class="form-actions">      <button type="submit" class="btn btn-primary" [disabled]="!donationForm.valid">הוספת תרומה</button>    </div>  </form></div></div>'
+    var COMPONENTS = [{'name': 'AddDonationComponent', 'selector': 'app-add-donator'},{'name': 'AddExpenditureComponent', 'selector': 'app-add-expenditure'},{'name': 'AddMemberFormComponent', 'selector': 'app-add-member-form'},{'name': 'AdminLayoutComponent', 'selector': 'app-admin-layout'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContactUsComponent', 'selector': 'app-contact-us'},{'name': 'CreditPledgePaymentComponent', 'selector': 'app-credit-pledge-payment'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DonatorReportSelModalComponent', 'selector': 'app-donator-report-sel-modal'},{'name': 'DonatorsManagingComponent', 'selector': 'app-donators-managing'},{'name': 'DonatorsReportComponent', 'selector': 'app-donators-report'},{'name': 'ExpendituresDisplayComponent', 'selector': 'app-expenditures-display'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'IconsComponent', 'selector': 'app-icons'},{'name': 'InfoPageComponent', 'selector': 'app-info-page'},{'name': 'InvoiceComponent', 'selector': 'app-invoice'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapsComponent', 'selector': 'app-maps'},{'name': 'MemberAccountPageComponent', 'selector': 'app-member-account-page'},{'name': 'MemberDetailsComponent', 'selector': 'app-member-details'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NotificationsComponent', 'selector': 'app-notifications'},{'name': 'PaginationComponent', 'selector': 'app-pagination'},{'name': 'PaymentComponent', 'selector': 'app-payment'},{'name': 'PaypalButtonComponent', 'selector': 'app-paypal-button'},{'name': 'PledgePaymentComponent', 'selector': 'app-pledge-payment'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'TableListComponent', 'selector': 'app-table-list'},{'name': 'TypographyComponent', 'selector': 'app-typography'},{'name': 'UpgradeComponent', 'selector': 'app-upgrade'},{'name': 'UserManagementComponent', 'selector': 'app-user-management'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'},{'name': 'ZmanimComponent', 'selector': 'app-zmanim'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'AddDonationComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'AddDonationComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,2514 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>material-dashboard-angular documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">material-dashboard-angular documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  UserManagementComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/user-management/user-management.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-user-management</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./user-management.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./user-management.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#isSuccess" >isSuccess</a>
+                            </li>
+                            <li>
+                                <a href="#message" >message</a>
+                            </li>
+                            <li>
+                                <a href="#newUser" >newUser</a>
+                            </li>
+                            <li>
+                                <a href="#roles" >roles</a>
+                            </li>
+                            <li>
+                                <a href="#selectedExpendituresFile" >selectedExpendituresFile</a>
+                            </li>
+                            <li>
+                                <a href="#selectedFile" >selectedFile</a>
+                            </li>
+                            <li>
+                                <a href="#selectedRoles" >selectedRoles</a>
+                            </li>
+                            <li>
+                                <a href="#selectedUser" >selectedUser</a>
+                            </li>
+                            <li>
+                                <a href="#users" >users</a>
+                            </li>
+                            <li>
+                                <a href="#userSelectedRoles" >userSelectedRoles</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addUser" >addUser</a>
+                            </li>
+                            <li>
+                                <a href="#assignRoles" >assignRoles</a>
+                            </li>
+                            <li>
+                                <a href="#getRoleNames" >getRoleNames</a>
+                            </li>
+                            <li>
+                                <a href="#hasRole" >hasRole</a>
+                            </li>
+                            <li>
+                                <a href="#isRoleSelected" >isRoleSelected</a>
+                            </li>
+                            <li>
+                                <a href="#loadRoles" >loadRoles</a>
+                            </li>
+                            <li>
+                                <a href="#loadUsers" >loadUsers</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onExpendituresFileSelected" >onExpendituresFileSelected</a>
+                            </li>
+                            <li>
+                                <a href="#onFileSelected" >onFileSelected</a>
+                            </li>
+                            <li>
+                                <a href="#onRoleChange" >onRoleChange</a>
+                            </li>
+                            <li>
+                                <a href="#onRoleCheckboxChange" >onRoleCheckboxChange</a>
+                            </li>
+                            <li>
+                                <a href="#resetForm" >resetForm</a>
+                            </li>
+                            <li>
+                                <a href="#selectUserForRoleAssignment" >selectUserForRoleAssignment</a>
+                            </li>
+                            <li>
+                                <a href="#toggleRoleSelection" >toggleRoleSelection</a>
+                            </li>
+                            <li>
+                                <a href="#updateUserRoles" >updateUserRoles</a>
+                            </li>
+                            <li>
+                                <a href="#uploadExcel" >uploadExcel</a>
+                            </li>
+                            <li>
+                                <a href="#uploadExpendituresExcel" >uploadExpendituresExcel</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(userService: <a href="../injectables/UserService.html" target="_self">UserService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/user-management/user-management.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>userService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UserService.html" target="_self" >UserService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addUser"></a>
+                    <span class="name">
+                        <span ><b>addUser</b></span>
+                        <a href="#addUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addUser()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="246"
+                                    class="link-to-prism">src/app/user-management/user-management.component.ts:246</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="assignRoles"></a>
+                    <span class="name">
+                        <span ><b>assignRoles</b></span>
+                        <a href="#assignRoles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>assignRoles(user: <a href="../classes/AppUser.html" target="_self">AppUser</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="218"
+                                    class="link-to-prism">src/app/user-management/user-management.component.ts:218</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../classes/AppUser.html" target="_self" >AppUser</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRoleNames"></a>
+                    <span class="name">
+                        <span ><b>getRoleNames</b></span>
+                        <a href="#getRoleNames"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getRoleNames(user: <a href="../classes/AppUser.html" target="_self">AppUser</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="284"
+                                    class="link-to-prism">src/app/user-management/user-management.component.ts:284</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../classes/AppUser.html" target="_self" >AppUser</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hasRole"></a>
+                    <span class="name">
+                        <span ><b>hasRole</b></span>
+                        <a href="#hasRole"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>hasRole(user: <a href="../classes/AppUser.html" target="_self">AppUser</a>, roleName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="213"
+                                    class="link-to-prism">src/app/user-management/user-management.component.ts:213</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../classes/AppUser.html" target="_self" >AppUser</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>roleName</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isRoleSelected"></a>
+                    <span class="name">
+                        <span ><b>isRoleSelected</b></span>
+                        <a href="#isRoleSelected"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isRoleSelected(user: <a href="../classes/AppUser.html" target="_self">AppUser</a>, role: <a href="../classes/Role.html" target="_self">Role</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="44"
+                                    class="link-to-prism">src/app/user-management/user-management.component.ts:44</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../classes/AppUser.html" target="_self" >AppUser</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>role</td>
+                                            <td>
+                                                            <code><a href="../classes/Role.html" target="_self" >Role</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadRoles"></a>
+                    <span class="name">
+                        <span ><b>loadRoles</b></span>
+                        <a href="#loadRoles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadRoles()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="144"
+                                    class="link-to-prism">src/app/user-management/user-management.component.ts:144</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../classes/Role.html" target="_self" >Observable&lt;Role[]&gt;</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadUsers"></a>
+                    <span class="name">
+                        <span ><b>loadUsers</b></span>
+                        <a href="#loadUsers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadUsers()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="113"
+                                    class="link-to-prism">src/app/user-management/user-management.component.ts:113</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="29"
+                                    class="link-to-prism">src/app/user-management/user-management.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onExpendituresFileSelected"></a>
+                    <span class="name">
+                        <span ><b>onExpendituresFileSelected</b></span>
+                        <a href="#onExpendituresFileSelected"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onExpendituresFileSelected(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="331"
+                                    class="link-to-prism">src/app/user-management/user-management.component.ts:331</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>event</td>
+                                            <td>
+                                                            <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onFileSelected"></a>
+                    <span class="name">
+                        <span ><b>onFileSelected</b></span>
+                        <a href="#onFileSelected"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onFileSelected(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="289"
+                                    class="link-to-prism">src/app/user-management/user-management.component.ts:289</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>event</td>
+                                            <td>
+                                                            <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onRoleChange"></a>
+                    <span class="name">
+                        <span ><b>onRoleChange</b></span>
+                        <a href="#onRoleChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onRoleChange(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, user: <a href="../classes/AppUser.html" target="_self">AppUser</a>, role: <a href="../classes/Role.html" target="_self">Role</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="53"
+                                    class="link-to-prism">src/app/user-management/user-management.component.ts:53</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>event</td>
+                                            <td>
+                                                            <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../classes/AppUser.html" target="_self" >AppUser</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>role</td>
+                                            <td>
+                                                            <code><a href="../classes/Role.html" target="_self" >Role</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onRoleCheckboxChange"></a>
+                    <span class="name">
+                        <span ><b>onRoleCheckboxChange</b></span>
+                        <a href="#onRoleCheckboxChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onRoleCheckboxChange(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, role: <a href="../classes/Role.html" target="_self">Role</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="174"
+                                    class="link-to-prism">src/app/user-management/user-management.component.ts:174</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>event</td>
+                                            <td>
+                                                            <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>role</td>
+                                            <td>
+                                                            <code><a href="../classes/Role.html" target="_self" >Role</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="resetForm"></a>
+                    <span class="name">
+                        <span ><b>resetForm</b></span>
+                        <a href="#resetForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>resetForm()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="270"
+                                    class="link-to-prism">src/app/user-management/user-management.component.ts:270</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectUserForRoleAssignment"></a>
+                    <span class="name">
+                        <span ><b>selectUserForRoleAssignment</b></span>
+                        <a href="#selectUserForRoleAssignment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>selectUserForRoleAssignment(user: <a href="../classes/AppUser.html" target="_self">AppUser</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="204"
+                                    class="link-to-prism">src/app/user-management/user-management.component.ts:204</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../classes/AppUser.html" target="_self" >AppUser</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toggleRoleSelection"></a>
+                    <span class="name">
+                        <span ><b>toggleRoleSelection</b></span>
+                        <a href="#toggleRoleSelection"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toggleRoleSelection(role: <a href="../classes/Role.html" target="_self">Role</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="195"
+                                    class="link-to-prism">src/app/user-management/user-management.component.ts:195</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>role</td>
+                                            <td>
+                                                            <code><a href="../classes/Role.html" target="_self" >Role</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateUserRoles"></a>
+                    <span class="name">
+                        <span ><b>updateUserRoles</b></span>
+                        <a href="#updateUserRoles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updateUserRoles(user: <a href="../classes/AppUser.html" target="_self">AppUser</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="82"
+                                    class="link-to-prism">src/app/user-management/user-management.component.ts:82</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>user</td>
+                                            <td>
+                                                            <code><a href="../classes/AppUser.html" target="_self" >AppUser</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="uploadExcel"></a>
+                    <span class="name">
+                        <span ><b>uploadExcel</b></span>
+                        <a href="#uploadExcel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>uploadExcel()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="297"
+                                    class="link-to-prism">src/app/user-management/user-management.component.ts:297</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="uploadExpendituresExcel"></a>
+                    <span class="name">
+                        <span ><b>uploadExpendituresExcel</b></span>
+                        <a href="#uploadExpendituresExcel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>uploadExpendituresExcel()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="316"
+                                    class="link-to-prism">src/app/user-management/user-management.component.ts:316</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isSuccess"></a>
+                    <span class="name">
+                        <span ><b>isSuccess</b></span>
+                        <a href="#isSuccess"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/user-management/user-management.component.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="message"></a>
+                    <span class="name">
+                        <span ><b>message</b></span>
+                        <a href="#message"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/user-management/user-management.component.ts:19</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="newUser"></a>
+                    <span class="name">
+                        <span ><b>newUser</b></span>
+                        <a href="#newUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/AppUser.html" target="_self" >AppUser</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new AppUser()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/user-management/user-management.component.ts:23</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="roles"></a>
+                    <span class="name">
+                        <span ><b>roles</b></span>
+                        <a href="#roles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Role.html" target="_self" >Role[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/user-management/user-management.component.ts:15</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedExpendituresFile"></a>
+                    <span class="name">
+                        <span ><b>selectedExpendituresFile</b></span>
+                        <a href="#selectedExpendituresFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>File | null</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/user-management/user-management.component.ts:18</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedFile"></a>
+                    <span class="name">
+                        <span ><b>selectedFile</b></span>
+                        <a href="#selectedFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>File | null</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/user-management/user-management.component.ts:21</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedRoles"></a>
+                    <span class="name">
+                        <span ><b>selectedRoles</b></span>
+                        <a href="#selectedRoles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Role.html" target="_self" >Role[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/user-management/user-management.component.ts:17</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedUser"></a>
+                    <span class="name">
+                        <span ><b>selectedUser</b></span>
+                        <a href="#selectedUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/AppUser.html" target="_self" >AppUser | null</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/user-management/user-management.component.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="users"></a>
+                    <span class="name">
+                        <span ><b>users</b></span>
+                        <a href="#users"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/AppUser.html" target="_self" >AppUser[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/user-management/user-management.component.ts:14</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="userSelectedRoles"></a>
+                    <span class="name">
+                        <span ><b>userSelectedRoles</b></span>
+                        <a href="#userSelectedRoles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>literal type</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/user-management/user-management.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { HttpHeaders } from &#x27;@angular/common/http&#x27;;
+import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { AppUser } from &#x27;app/models/app-user.model&#x27;;
+import { Role } from &#x27;app/models/role.model&#x27;;
+import { UserService } from &#x27;app/user.service&#x27;;
+import { catchError, Observable, tap } from &#x27;rxjs&#x27;;
+
+@Component({
+  selector: &#x27;app-user-management&#x27;,
+  templateUrl: &#x27;./user-management.component.html&#x27;,
+  styleUrls: [&#x27;./user-management.component.scss&#x27;]
+})
+export class UserManagementComponent implements OnInit {
+  users: AppUser[] &#x3D; [];
+  roles: Role[] &#x3D; [];
+  userSelectedRoles: { [userId: number]: Role[] } &#x3D; {}; // Track roles per user
+  selectedRoles: Role[] &#x3D; []; // Array to store selected roles
+  selectedExpendituresFile: File | null &#x3D; null; // For expenditures Excel
+  message: string &#x3D; &#x27;&#x27;; // To hold success or error messages
+  isSuccess: boolean &#x3D; true; // To determine if the message is success or error
+  selectedFile: File | null &#x3D; null;
+
+  newUser: AppUser &#x3D; new AppUser(); // No need to manually define fields
+
+  selectedUser: AppUser | null &#x3D; null; // Selected user for role assignment
+
+  constructor(private userService: UserService) {}
+
+  ngOnInit() {
+    this.loadRoles().subscribe(() &#x3D;&gt; {
+      this.loadUsers();
+    });
+    console.log(&#x27;Roles available:&#x27;, this.roles); // Make sure roles are loaded correctly
+  }
+  // isRoleSelected(user: AppUser, role: Role): boolean {
+  //   const selectedRoles &#x3D; this.userSelectedRoles[user.id] || [];
+  //   const isSelected &#x3D; selectedRoles.some(selectedRole &#x3D;&gt; selectedRole.name &#x3D;&#x3D;&#x3D; role.name);
+    
+  //   console.log(&#x60;Checking if role &#x27;${role.name}&#x27; is selected for user &#x27;${user.username}&#x27;: ${isSelected}&#x60;);
+  //   console.log(&#x27;User selected roles:&#x27;, selectedRoles);
+    
+  //   return isSelected;
+  // }
+  isRoleSelected(user: AppUser, role: Role): boolean {
+    const userRoles &#x3D; this.userSelectedRoles[user.id] || [];
+  
+    // Check if the role exists in the user&#x27;s roles array (by Role.name)
+    const isSelected &#x3D; userRoles.some(userRole &#x3D;&gt; userRole.name &#x3D;&#x3D;&#x3D; role.name);    
+    return isSelected;
+  }
+  
+// Toggle role selection for a specific user
+onRoleChange(event: any, user: AppUser, role: Role) {
+  const isChecked &#x3D; event.target.checked;
+
+  // Initialize userSelectedRoles if not present
+  if (!this.userSelectedRoles[user.id]) {
+    this.userSelectedRoles[user.id] &#x3D; [...user.roles]; // Initialize with user&#x27;s existing roles
+  }
+
+  const userRoles &#x3D; this.userSelectedRoles[user.id];
+  const existingRoleIndex &#x3D; userRoles.findIndex(selectedRole &#x3D;&gt; selectedRole.name &#x3D;&#x3D;&#x3D; role.name);
+
+  if (isChecked) {
+    // Add the role if it&#x27;s checked
+    if (existingRoleIndex &#x3D;&#x3D;&#x3D; -1) {
+      userRoles.push(role);
+    }
+  } else {
+    // Remove the role if it&#x27;s unchecked
+    if (existingRoleIndex !&#x3D;&#x3D; -1) {
+      userRoles.splice(existingRoleIndex, 1);
+    }
+  }
+  
+  console.log(&#x60;Updated roles for user &#x27;${user.username}&#x27;:&#x60;, userRoles);
+}
+
+
+// Assign roles to the selected user
+// Assign roles to the selected user
+updateUserRoles(user: AppUser) {
+  const selectedRoles &#x3D; this.userSelectedRoles[user.id] || [];
+
+  console.log(&#x27;Submitting roles for user:&#x27;, user.username);
+  console.log(&#x27;Roles being submitted:&#x27;, selectedRoles.map(r &#x3D;&gt; r.name));
+
+  const trimmedRoles &#x3D; selectedRoles.map(r &#x3D;&gt; r.name.trim()); // Trim the roles before submitting
+
+  this.userService.assignRoles(user.id, trimmedRoles).subscribe({
+    next: () &#x3D;&gt; {
+      this.loadUsers(); // Reload users to reflect changes
+      this.message &#x3D; &#x27;Roles assigned successfully!&#x27;;
+      this.isSuccess &#x3D; true;
+      setTimeout(() &#x3D;&gt; {
+        this.message &#x3D; &#x27;&#x27;;
+        // Reload the page to reflect the changes immediately
+        window.location.reload();
+      }, 3000); // Adjust the delay as needed
+    },
+    error: (err) &#x3D;&gt; {
+      this.message &#x3D; err?.error?.message || err?.message || &#x27;An error occurred while assigning roles.&#x27;;
+      this.isSuccess &#x3D; false;
+      setTimeout(() &#x3D;&gt; {
+        this.message &#x3D; &#x27;&#x27;;
+      }, 3000);
+    }
+  });
+}
+
+
+// Load users and roles
+loadUsers() {
+  this.userService.getAllUsers().subscribe(users &#x3D;&gt; {
+    this.users &#x3D; users;
+    console.log(&#x27;Loaded Users:&#x27;, this.users); // Add this to check users
+
+    // Ensure roles are loaded
+    if (!this.roles || this.roles.length &#x3D;&#x3D;&#x3D; 0) {
+      console.error(&quot;Roles are not loaded properly. Unable to map roles to users.&quot;);
+      return;
+    }
+
+    // Initialize userSelectedRoles map
+    this.users.forEach(user &#x3D;&gt; {
+      // Check if user.roles contains strings or objects
+      this.userSelectedRoles[user.id] &#x3D; user.roles.map((userRole: string | Role) &#x3D;&gt; {
+        // Handle userRole if it&#x27;s a string (role name)
+        const roleName &#x3D; typeof userRole &#x3D;&#x3D;&#x3D; &#x27;string&#x27; ? userRole : userRole.name;
+
+        // Find the corresponding Role object by its name
+        const matchingRole &#x3D; this.roles.find(role &#x3D;&gt; role.name.trim() &#x3D;&#x3D;&#x3D; roleName.trim());
+
+        // If the role is found, return it, otherwise return a default empty Role object
+        return matchingRole || { id: 0, name: &#x27;&#x27;, roleCode: 0 };
+      });
+    });
+
+    // Log to ensure user roles are correctly initialized
+    console.log(&#x27;User roles mapped after load:&#x27;, this.userSelectedRoles);
+  });
+}
+
+loadRoles(): Observable&lt;Role[]&gt; {
+  return this.userService.getRoles().pipe(
+    tap(roles &#x3D;&gt; {
+      console.log(&#x27;Roles fetched from server:&#x27;, roles); // Log the raw roles from server
+
+      if (roles &amp;&amp; roles.length &gt; 0) {
+        // Log role names before trimming
+        console.log(&#x27;Raw role names before trimming:&#x27;, roles.map(role &#x3D;&gt; role.name));
+
+        this.roles &#x3D; roles.map(role &#x3D;&gt; ({
+          ...role,
+          name: role.name ? role.name.trim() : &#x27;&#x27;  // Trimming the role names
+        }));
+
+        // Log role names after trimming
+        console.log(&#x27;Role names after trimming:&#x27;, this.roles.map(role &#x3D;&gt; role.name));
+      } else {
+        console.error(&#x27;No roles available from the server.&#x27;);
+      }
+    }),
+    catchError(error &#x3D;&gt; {
+      // Log error if something goes wrong
+      console.error(&#x27;Error fetching roles:&#x27;, error);
+      return [];
+    })
+  );
+}
+
+
+ // Handle checkbox change for role selection
+ onRoleCheckboxChange(event: any, role: Role) {
+  const isChecked &#x3D; event.target?.checked; // Check if the checkbox is checked
+
+  if (isChecked) {
+    // Add the role if it&#x27;s checked and not already in selectedRoles
+    if (!this.selectedRoles.some(r &#x3D;&gt; r.id &#x3D;&#x3D;&#x3D; role.id)) {
+      this.selectedRoles.push(role);
+      console.log(&#x27;Role added:&#x27;, role);
+    }
+  } else {
+    // Remove the role if it&#x27;s unchecked
+    this.selectedRoles &#x3D; this.selectedRoles.filter(r &#x3D;&gt; r.id !&#x3D;&#x3D; role.id);
+    console.log(&#x27;Role removed:&#x27;, role);
+  }
+
+  // Log the updated state of selectedRoles for debugging
+  console.log(&#x27;Updated selected roles:&#x27;, this.selectedRoles);
+}
+
+
+  // Toggle the selection of roles
+  toggleRoleSelection(role: Role) {
+    const index &#x3D; this.selectedRoles.findIndex(r &#x3D;&gt; r.id &#x3D;&#x3D;&#x3D; role.id);
+    if (index &gt; -1) {
+      this.selectedRoles.splice(index, 1); // Unselect if already selected
+    } else {
+      this.selectedRoles.push(role); // Select if not selected
+    }
+  }
+
+  selectUserForRoleAssignment(user: AppUser) {
+    this.selectedUser &#x3D; user;
+    this.selectedRoles &#x3D; [...user.roles]; // Initialize selectedRoles with user&#x27;s current roles
+    console.log(&#x27;Selected user for role assignment:&#x27;, this.selectedUser);
+    console.log(&#x27;Pre-populated selectedRoles:&#x27;, this.selectedRoles);
+  }
+ 
+  
+  // Function to check if a user has a specific role
+  hasRole(user: AppUser, roleName: string): boolean {
+    return user.roles.some(role &#x3D;&gt; role.name &#x3D;&#x3D;&#x3D; roleName);
+  }
+
+  // Assign roles to the selected user
+  assignRoles(user: AppUser) {
+    console.log(&#x27;Assigning roles for user:&#x27;, user.username);
+    console.log(&#x27;Selected roles before assignment:&#x27;, this.selectedRoles);
+  
+    const roleNames &#x3D; this.selectedRoles.map(role &#x3D;&gt; role.name); // Get role names
+  
+    // Send selected roles to backend
+    this.userService.assignRoles(user.id, roleNames).subscribe({
+      next: () &#x3D;&gt; {
+        this.loadUsers(); // Reload users to reflect changes
+        this.message &#x3D; &#x27;Roles assigned successfully!&#x27;;
+        this.isSuccess &#x3D; true;
+        setTimeout(() &#x3D;&gt; {
+          this.message &#x3D; &#x27;&#x27;;
+        }, 3000);
+      },
+      error: (err) &#x3D;&gt; {
+        this.message &#x3D; err?.error?.message || err?.message || &#x27;An error occurred while assigning roles.&#x27;;
+        this.isSuccess &#x3D; false;
+        setTimeout(() &#x3D;&gt; {
+          this.message &#x3D; &#x27;&#x27;;
+        }, 3000);
+      }
+    });
+  }
+  
+
+  // Add a new user with selected roles
+  addUser() {
+    this.newUser.roles &#x3D; this.selectedRoles;
+    this.userService.registerUser(this.newUser).subscribe({
+      next: () &#x3D;&gt; {
+        this.loadUsers(); // Reload users after adding a new one
+        this.selectedRoles &#x3D; []; // Reset the selected roles
+        this.message &#x3D; &#x27;User added successfully!&#x27;;
+        this.isSuccess &#x3D; true;
+        this.resetForm();
+        setTimeout(() &#x3D;&gt; {
+          this.message &#x3D; &#x27;&#x27;; // Clear message after a few seconds
+        }, 3000);
+      },
+      error: (err) &#x3D;&gt; {
+        this.message &#x3D; err?.error?.message || err?.message || &#x27;An error occurred during user creation.&#x27;;
+        this.isSuccess &#x3D; false;
+        setTimeout(() &#x3D;&gt; {
+          this.message &#x3D; &#x27;&#x27;;
+        }, 3000);
+      }
+    });
+  }
+
+  // Reset the form after adding the user
+  resetForm() {
+    this.newUser &#x3D; {
+      id: 0,
+      username: &#x27;&#x27;,
+      email: &#x27;&#x27;,
+      password: &#x27;&#x27;,
+      roles: [],
+      clientId: null,
+      apiKey: null,
+      apiSecret: null
+    };
+  }
+
+  // Get role names as a comma-separated string
+  getRoleNames(user: AppUser): string {
+    return user.roles.map(role &#x3D;&gt; role.name).join(&#x27;, &#x27;);
+  }
+
+  // File selection event handler
+  onFileSelected(event: any) {
+    const file: File &#x3D; event.target.files[0];
+    if (file) {
+      this.selectedFile &#x3D; file;
+    }
+  }
+
+  // Upload the Excel file
+  uploadExcel() {
+    if (this.selectedFile) {
+      this.userService.uploadExcelFile(this.selectedFile).subscribe({
+        next: (response) &#x3D;&gt; {
+          this.message &#x3D; &#x27;File uploaded successfully!&#x27;;
+          this.isSuccess &#x3D; true;
+        },
+        error: (error) &#x3D;&gt; {
+          this.message &#x3D; &#x27;Failed to upload file.&#x27;;
+          this.isSuccess &#x3D; false;
+        }
+      });
+    } else {
+      this.message &#x3D; &#x27;No file selected.&#x27;;
+      this.isSuccess &#x3D; false;
+    }
+  }
+
+  // Upload expenditures Excel file
+  uploadExpendituresExcel() {
+    if (this.selectedExpendituresFile) {
+      this.userService.uploadExpendituresExcelFile(this.selectedExpendituresFile).subscribe({
+        next: () &#x3D;&gt; {
+          this.message &#x3D; &#x27;Expenditures Excel file uploaded successfully&#x27;;
+          this.isSuccess &#x3D; true;
+        },
+        error: (err) &#x3D;&gt; {
+          this.message &#x3D; err?.error?.message || err?.message || &#x27;An error occurred during expenditures file upload.&#x27;;
+          this.isSuccess &#x3D; false;
+        }
+      });
+    }
+  }
+
+  onExpendituresFileSelected(event: any) {
+    this.selectedExpendituresFile &#x3D; event.target.files[0];
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;main-content&quot;&gt;
+  &lt;div class&#x3D;&quot;container-fluid&quot;&gt;
+    &lt;!-- Add User Section --&gt;
+    &lt;section&gt;
+      &lt;div class&#x3D;&quot;card&quot;&gt;
+        &lt;div class&#x3D;&quot;card-header&quot;&gt;
+          &lt;h4 class&#x3D;&quot;card-title&quot;&gt;הוסף משתמש&lt;/h4&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;card-body&quot;&gt;
+          &lt;form (ngSubmit)&#x3D;&quot;addUser()&quot; class&#x3D;&quot;two-column-form&quot;&gt;
+            &lt;div class&#x3D;&quot;form-row&quot;&gt;
+              &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                &lt;label for&#x3D;&quot;password&quot;&gt;סיסמא (עבור נדרים נט)&lt;/label&gt;
+                &lt;input type&#x3D;&quot;password&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;password&quot; [(ngModel)]&#x3D;&quot;newUser.password&quot; name&#x3D;&quot;password&quot; required&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                &lt;label for&#x3D;&quot;username&quot;&gt;שם משתמש (עבור נדרים נט)&lt;/label&gt;
+                &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;username&quot; [(ngModel)]&#x3D;&quot;newUser.username&quot; name&#x3D;&quot;username&quot; required&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class&#x3D;&quot;form-row&quot;&gt;
+              &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                &lt;label for&#x3D;&quot;lastName&quot;&gt;שם משפחה&lt;/label&gt;
+                &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;lastName&quot; [(ngModel)]&#x3D;&quot;newUser.lastName&quot; name&#x3D;&quot;lastName&quot; required&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                &lt;label for&#x3D;&quot;firstName&quot;&gt;שם פרטי&lt;/label&gt;
+                &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;firstName&quot; [(ngModel)]&#x3D;&quot;newUser.firstName&quot; name&#x3D;&quot;firstName&quot; required&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class&#x3D;&quot;form-row&quot;&gt;
+              &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                &lt;label for&#x3D;&quot;email&quot;&gt;אימייל&lt;/label&gt;
+                &lt;input type&#x3D;&quot;email&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;email&quot; [(ngModel)]&#x3D;&quot;newUser.email&quot; name&#x3D;&quot;email&quot; required&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                &lt;label for&#x3D;&quot;groupId&quot;&gt;מס&#x27; קבוצת שיוך&lt;/label&gt;
+                &lt;input type&#x3D;&quot;number&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;groupId&quot; [(ngModel)]&#x3D;&quot;newUser.groupId&quot; name&#x3D;&quot;groupId&quot;&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class&#x3D;&quot;form-row&quot;&gt;
+              &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                &lt;label for&#x3D;&quot;synagogue&quot;&gt;שם בית הכנסת&lt;/label&gt;
+                &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;synagogue&quot; [(ngModel)]&#x3D;&quot;newUser.synagogue&quot; name&#x3D;&quot;synagogue&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                &lt;label for&#x3D;&quot;city&quot;&gt;עיר&lt;/label&gt;
+                &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;city&quot; [(ngModel)]&#x3D;&quot;newUser.city&quot; name&#x3D;&quot;city&quot;&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class&#x3D;&quot;form-row&quot;&gt;
+              &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                &lt;label for&#x3D;&quot;terminalNumber&quot;&gt;מספר טרמינל (חברת הסליקה)&lt;/label&gt;
+                &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;terminalNumber&quot; [(ngModel)]&#x3D;&quot;newUser.terminalNumber&quot; name&#x3D;&quot;terminalNumber&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                &lt;label for&#x3D;&quot;paymentPassword&quot;&gt;סיסמא (חברת הסליקה)&lt;/label&gt;
+                &lt;input type&#x3D;&quot;password&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;paymentPassword&quot; [(ngModel)]&#x3D;&quot;newUser.paymentPassword&quot; name&#x3D;&quot;paymentPassword&quot;&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class&#x3D;&quot;form-row&quot;&gt;
+              &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                &lt;label for&#x3D;&quot;apiKey&quot;&gt;API Key (עבור הפקת חשבונית)&lt;/label&gt;
+                &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;apiKey&quot; [(ngModel)]&#x3D;&quot;newUser.apiKey&quot; name&#x3D;&quot;apiKey&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                &lt;label for&#x3D;&quot;apiSecret&quot;&gt;API Secret (עבור הפקת חשבונית)&lt;/label&gt;
+                &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;apiSecret&quot; [(ngModel)]&#x3D;&quot;newUser.apiSecret&quot; name&#x3D;&quot;apiSecret&quot;&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Role Dropdown for Adding User (Single Selection) --&gt;
+            &lt;div class&#x3D;&quot;form-row&quot;&gt;
+              &lt;div class&#x3D;&quot;form-group col&quot;&gt;
+                &lt;label for&#x3D;&quot;role&quot;&gt;בחר הרשאה:&lt;/label&gt;
+                &lt;select class&#x3D;&quot;form-control&quot; id&#x3D;&quot;role&quot; [(ngModel)]&#x3D;&quot;selectedRoles&quot; name&#x3D;&quot;role&quot;&gt;
+                  &lt;option *ngFor&#x3D;&quot;let role of roles&quot; [value]&#x3D;&quot;role&quot;&gt;{{ role.name }}&lt;/option&gt;
+                &lt;/select&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary&quot;&gt;הוסף משתמש&lt;/button&gt;
+          &lt;/form&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Upload Excel Files Section --&gt;
+  &lt;section class&#x3D;&quot;section-container&quot;&gt;
+    &lt;div class&#x3D;&quot;card&quot;&gt;
+      &lt;div class&#x3D;&quot;card-header&quot;&gt;
+        &lt;h4 class&#x3D;&quot;card-title&quot;&gt;בחר קובץ להעלאה&lt;/h4&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;card-body&quot;&gt;
+        &lt;div class&#x3D;&quot;upload-section&quot;&gt;
+          &lt;label&gt;אקסל תרומות:&lt;/label&gt;
+          &lt;input type&#x3D;&quot;file&quot; id&#x3D;&quot;fileUpload&quot; (change)&#x3D;&quot;onFileSelected($event)&quot; class&#x3D;&quot;file-input&quot; /&gt;
+          &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary&quot; (click)&#x3D;&quot;uploadExcel()&quot;&gt;העלה קובץ אקסל&lt;/button&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;upload-section&quot;&gt;
+          &lt;label&gt;אקסל הוצאות:&lt;/label&gt;
+          &lt;input type&#x3D;&quot;file&quot; id&#x3D;&quot;expendituresFileUpload&quot; (change)&#x3D;&quot;onExpendituresFileSelected($event)&quot; class&#x3D;&quot;file-input&quot; /&gt;
+          &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary&quot; (click)&#x3D;&quot;uploadExpendituresExcel()&quot;&gt;העלה קובץ אקסל הוצאות&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;!-- Manage User Permissions Section --&gt;
+  &lt;section class&#x3D;&quot;section-container&quot;&gt;
+    &lt;div class&#x3D;&quot;card&quot;&gt;
+      &lt;div class&#x3D;&quot;card-header&quot;&gt;
+        &lt;h4 class&#x3D;&quot;card-title&quot;&gt;נהל הרשאות משתמש&lt;/h4&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;card-body&quot;&gt;
+        &lt;div *ngIf&#x3D;&quot;selectedUser&quot;&gt;
+          &lt;h5&gt;הענק הרשאות ל {{ selectedUser.username }}&lt;/h5&gt;
+          &lt;div *ngFor&#x3D;&quot;let role of roles&quot;&gt;
+            &lt;input type&#x3D;&quot;checkbox&quot; 
+                   [checked]&#x3D;&quot;isRoleSelected(selectedUser, role)&quot; 
+                   (change)&#x3D;&quot;onRoleChange($event, selectedUser, role)&quot; /&gt; 
+            {{ role.name }}
+          &lt;/div&gt;
+&lt;button (click)&#x3D;&quot;assignRoles(selectedUser)&quot; class&#x3D;&quot;btn btn-primary&quot;&gt;שמור הרשאות&lt;/button&gt;
+        &lt;/div&gt;
+
+        &lt;div *ngIf&#x3D;&quot;!selectedUser&quot;&gt;
+          &lt;!-- No user selected --&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Existing Users Table --&gt;
+        &lt;h5&gt;משתמשים קיימים&lt;/h5&gt;
+        &lt;div *ngIf&#x3D;&quot;users.length &gt; 0&quot; class&#x3D;&quot;table-responsive&quot;&gt;
+          &lt;table class&#x3D;&quot;table&quot;&gt;
+            &lt;thead class&#x3D;&quot;text-primary&quot;&gt;
+              &lt;tr&gt;
+                &lt;th&gt;שם משתמש&lt;/th&gt;
+                &lt;th&gt;אימייל&lt;/th&gt;
+                &lt;th&gt;בית כנסת&lt;/th&gt;
+                &lt;th&gt;שם פרטי&lt;/th&gt;
+                &lt;th&gt;קוד קבוצה&lt;/th&gt;
+                &lt;th&gt;עיר&lt;/th&gt;
+                &lt;th&gt;מספר טרמינל&lt;/th&gt;
+                &lt;th&gt;הרשאות&lt;/th&gt;
+                &lt;th&gt;פעולות&lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+              &lt;tr *ngFor&#x3D;&quot;let user of users&quot;&gt;
+                &lt;td&gt;{{ user.username }}&lt;/td&gt;
+                &lt;td&gt;{{ user.email }}&lt;/td&gt;
+                &lt;td&gt;{{ user.synagogue }}&lt;/td&gt;
+                &lt;td&gt;{{ user.firstName }}&lt;/td&gt;
+                &lt;td&gt;{{ user.groupId }}&lt;/td&gt;
+                &lt;td&gt;{{ user.city }}&lt;/td&gt;
+                &lt;td&gt;{{ user.terminalNumber }}&lt;/td&gt;
+                &lt;td&gt;
+                  &lt;h5&gt;{{ user.username }} - Roles&lt;/h5&gt;
+                  &lt;div *ngFor&#x3D;&quot;let role of roles&quot;&gt;
+                    &lt;label&gt;
+                      &lt;input
+                        type&#x3D;&quot;checkbox&quot;
+                        [checked]&#x3D;&quot;isRoleSelected(user, role)&quot;  
+                        (change)&#x3D;&quot;onRoleChange($event, user, role)&quot;
+                      /&gt;
+                      {{ role.name }} &lt;!-- Display the role name next to the checkbox --&gt;
+                    &lt;/label&gt;
+                  &lt;/div&gt;
+                &lt;/td&gt;
+                &lt;td&gt;
+                  &lt;button class&#x3D;&quot;btn btn-primary&quot; (click)&#x3D;&quot;updateUserRoles(user)&quot;&gt;Update Roles&lt;/button&gt;
+                &lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./user-management.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">/* General section container style */
+.section-container {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* Input fields and select boxes */
+input[type&#x3D;&quot;text&quot;],
+input[type&#x3D;&quot;email&quot;],
+input[type&#x3D;&quot;password&quot;],
+input[type&#x3D;&quot;number&quot;],
+input[type&#x3D;&quot;file&quot;],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px; /* Ensure consistent font size */
+}
+
+/* Ensure no overlap with .form-control from global CSS */
+input.form-control,
+select.form-control {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+}
+
+/* Button styles */
+button[type&#x3D;&quot;submit&quot;],
+button[type&#x3D;&quot;button&quot;] {
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Blue button */
+.btn-primary {
+  background-color: #008CBA;
+  border-color: #007bb5; /* Darker shade for border */
+}
+
+/* Gray button */
+.btn-secondary {
+  background-color: #555555;
+  border-color: #444444; /* Darker shade for border */
+}
+
+/* Hover effects for buttons */
+button[type&#x3D;&quot;submit&quot;]:hover,
+button[type&#x3D;&quot;button&quot;]:hover {
+  // background-color: #45a049;
+}
+
+button.btn-primary:hover {
+  background-color: #007bb5; /* Darker blue on hover */
+}
+
+button.btn-secondary:hover {
+  background-color: #444444; /* Darker gray on hover */
+}
+
+/* File upload section style */
+.upload-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Table styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  font-size: 14px; /* Consistent font size */
+}
+
+/* Style table headers to match global CSS */
+.table th {
+  background-color: #70a1d7;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+/* Ensure consistent spacing for form containers */
+.container {
+  margin-top: 60px; /* Adjusted to avoid overlap with the navbar */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    margin-top: 120px; /* Slightly more margin on smaller screens */
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-group {
+    padding: 0;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="main-content">  <div class="container-fluid">    <!-- Add User Section -->    <section>      <div class="card">        <div class="card-header">          <h4 class="card-title">הוסף משתמש</h4>        </div>        <div class="card-body">          <form (ngSubmit)="addUser()" class="two-column-form">            <div class="form-row">              <div class="form-group col">                <label for="password">סיסמא (עבור נדרים נט)</label>                <input type="password" class="form-control" id="password" [(ngModel)]="newUser.password" name="password" required>              </div>              <div class="form-group col">                <label for="username">שם משתמש (עבור נדרים נט)</label>                <input type="text" class="form-control" id="username" [(ngModel)]="newUser.username" name="username" required>              </div>            </div>            <div class="form-row">              <div class="form-group col">                <label for="lastName">שם משפחה</label>                <input type="text" class="form-control" id="lastName" [(ngModel)]="newUser.lastName" name="lastName" required>              </div>              <div class="form-group col">                <label for="firstName">שם פרטי</label>                <input type="text" class="form-control" id="firstName" [(ngModel)]="newUser.firstName" name="firstName" required>              </div>            </div>            <div class="form-row">              <div class="form-group col">                <label for="email">אימייל</label>                <input type="email" class="form-control" id="email" [(ngModel)]="newUser.email" name="email" required>              </div>              <div class="form-group col">                <label for="groupId">מס\' קבוצת שיוך</label>                <input type="number" class="form-control" id="groupId" [(ngModel)]="newUser.groupId" name="groupId">              </div>            </div>            <div class="form-row">              <div class="form-group col">                <label for="synagogue">שם בית הכנסת</label>                <input type="text" class="form-control" id="synagogue" [(ngModel)]="newUser.synagogue" name="synagogue">              </div>              <div class="form-group col">                <label for="city">עיר</label>                <input type="text" class="form-control" id="city" [(ngModel)]="newUser.city" name="city">              </div>            </div>            <div class="form-row">              <div class="form-group col">                <label for="terminalNumber">מספר טרמינל (חברת הסליקה)</label>                <input type="text" class="form-control" id="terminalNumber" [(ngModel)]="newUser.terminalNumber" name="terminalNumber">              </div>              <div class="form-group col">                <label for="paymentPassword">סיסמא (חברת הסליקה)</label>                <input type="password" class="form-control" id="paymentPassword" [(ngModel)]="newUser.paymentPassword" name="paymentPassword">              </div>            </div>            <div class="form-row">              <div class="form-group col">                <label for="apiKey">API Key (עבור הפקת חשבונית)</label>                <input type="text" class="form-control" id="apiKey" [(ngModel)]="newUser.apiKey" name="apiKey">              </div>              <div class="form-group col">                <label for="apiSecret">API Secret (עבור הפקת חשבונית)</label>                <input type="text" class="form-control" id="apiSecret" [(ngModel)]="newUser.apiSecret" name="apiSecret">              </div>            </div>            <!-- Role Dropdown for Adding User (Single Selection) -->            <div class="form-row">              <div class="form-group col">                <label for="role">בחר הרשאה:</label>                <select class="form-control" id="role" [(ngModel)]="selectedRoles" name="role">                  <option *ngFor="let role of roles" [value]="role">{{ role.name }}</option>                </select>              </div>            </div>            <button type="submit" class="btn btn-primary">הוסף משתמש</button>          </form>        </div>      </div>    </section>  </div>  <!-- Upload Excel Files Section -->  <section class="section-container">    <div class="card">      <div class="card-header">        <h4 class="card-title">בחר קובץ להעלאה</h4>      </div>      <div class="card-body">        <div class="upload-section">          <label>אקסל תרומות:</label>          <input type="file" id="fileUpload" (change)="onFileSelected($event)" class="file-input" />          <button type="button" class="btn btn-primary" (click)="uploadExcel()">העלה קובץ אקסל</button>        </div>        <div class="upload-section">          <label>אקסל הוצאות:</label>          <input type="file" id="expendituresFileUpload" (change)="onExpendituresFileSelected($event)" class="file-input" />          <button type="button" class="btn btn-primary" (click)="uploadExpendituresExcel()">העלה קובץ אקסל הוצאות</button>        </div>      </div>    </div>  </section>  <!-- Manage User Permissions Section -->  <section class="section-container">    <div class="card">      <div class="card-header">        <h4 class="card-title">נהל הרשאות משתמש</h4>      </div>      <div class="card-body">        <div *ngIf="selectedUser">          <h5>הענק הרשאות ל {{ selectedUser.username }}</h5>          <div *ngFor="let role of roles">            <input type="checkbox"                    [checked]="isRoleSelected(selectedUser, role)"                    (change)="onRoleChange($event, selectedUser, role)" />             {{ role.name }}          </div><button (click)="assignRoles(selectedUser)" class="btn btn-primary">שמור הרשאות</button>        </div>        <div *ngIf="!selectedUser">          <!-- No user selected -->        </div>        <!-- Existing Users Table -->        <h5>משתמשים קיימים</h5>        <div *ngIf="users.length > 0" class="table-responsive">          <table class="table">            <thead class="text-primary">              <tr>                <th>שם משתמש</th>                <th>אימייל</th>                <th>בית כנסת</th>                <th>שם פרטי</th>                <th>קוד קבוצה</th>                <th>עיר</th>                <th>מספר טרמינל</th>                <th>הרשאות</th>                <th>פעולות</th>              </tr>            </thead>            <tbody>              <tr *ngFor="let user of users">                <td>{{ user.username }}</td>                <td>{{ user.email }}</td>                <td>{{ user.synagogue }}</td>                <td>{{ user.firstName }}</td>                <td>{{ user.groupId }}</td>                <td>{{ user.city }}</td>                <td>{{ user.terminalNumber }}</td>                <td>                  <h5>{{ user.username }} - Roles</h5>                  <div *ngFor="let role of roles">                    <label>                      <input                        type="checkbox"                        [checked]="isRoleSelected(user, role)"                          (change)="onRoleChange($event, user, role)"                      />                      {{ role.name }} <!-- Display the role name next to the checkbox -->                    </label>                  </div>                </td>                <td>                  <button class="btn btn-primary" (click)="updateUserRoles(user)">Update Roles</button>                </td>              </tr>            </tbody>          </table>        </div>      </div>    </div>  </section></div></div>'
+    var COMPONENTS = [{'name': 'AddDonationComponent', 'selector': 'app-add-donator'},{'name': 'AddExpenditureComponent', 'selector': 'app-add-expenditure'},{'name': 'AddMemberFormComponent', 'selector': 'app-add-member-form'},{'name': 'AdminLayoutComponent', 'selector': 'app-admin-layout'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContactUsComponent', 'selector': 'app-contact-us'},{'name': 'CreditPledgePaymentComponent', 'selector': 'app-credit-pledge-payment'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DonatorReportSelModalComponent', 'selector': 'app-donator-report-sel-modal'},{'name': 'DonatorsManagingComponent', 'selector': 'app-donators-managing'},{'name': 'DonatorsReportComponent', 'selector': 'app-donators-report'},{'name': 'ExpendituresDisplayComponent', 'selector': 'app-expenditures-display'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'IconsComponent', 'selector': 'app-icons'},{'name': 'InfoPageComponent', 'selector': 'app-info-page'},{'name': 'InvoiceComponent', 'selector': 'app-invoice'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapsComponent', 'selector': 'app-maps'},{'name': 'MemberAccountPageComponent', 'selector': 'app-member-account-page'},{'name': 'MemberDetailsComponent', 'selector': 'app-member-details'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NotificationsComponent', 'selector': 'app-notifications'},{'name': 'PaginationComponent', 'selector': 'app-pagination'},{'name': 'PaymentComponent', 'selector': 'app-payment'},{'name': 'PaypalButtonComponent', 'selector': 'app-paypal-button'},{'name': 'PledgePaymentComponent', 'selector': 'app-pledge-payment'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'TableListComponent', 'selector': 'app-table-list'},{'name': 'TypographyComponent', 'selector': 'app-typography'},{'name': 'UpgradeComponent', 'selector': 'app-upgrade'},{'name': 'UserManagementComponent', 'selector': 'app-user-management'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'},{'name': 'ZmanimComponent', 'selector': 'app-zmanim'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'UserManagementComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'UserManagementComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

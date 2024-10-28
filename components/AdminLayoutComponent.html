@@ -1,0 +1,1250 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>material-dashboard-angular documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">material-dashboard-angular documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  AdminLayoutComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/layouts/admin-layout/admin-layout.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+                <code>AfterViewInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-admin-layout</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./admin-layout.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./admin-layout.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_router" >_router</a>
+                            </li>
+                            <li>
+                                <a href="#appName" >appName</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#lastPoppedUrl" >lastPoppedUrl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#location" >location</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#yScrollStack" >yScrollStack</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#initializePerfectScrollbar" >initializePerfectScrollbar</a>
+                            </li>
+                            <li>
+                                <a href="#isMac" >isMac</a>
+                            </li>
+                            <li>
+                                <a href="#isMaps" >isMaps</a>
+                            </li>
+                            <li>
+                                <a href="#ngAfterViewInit" >ngAfterViewInit</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#runOnRouteChange" >runOnRouteChange</a>
+                            </li>
+                            <li>
+                                <a href="#scrollToTop" >scrollToTop</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(location: Location, router: Router, configService: <a href="../injectables/AppConfigService.html" target="_self">AppConfigService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/layouts/admin-layout/admin-layout.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>location</td>
+                                                  
+                                                        <td>
+                                                                    <code>Location</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code>Router</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>configService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AppConfigService.html" target="_self" >AppConfigService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initializePerfectScrollbar"></a>
+                    <span class="name">
+                        <span ><b>initializePerfectScrollbar</b></span>
+                        <a href="#initializePerfectScrollbar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>initializePerfectScrollbar(element: HTMLElement)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="98"
+                                    class="link-to-prism">src/app/layouts/admin-layout/admin-layout.component.ts:98</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>element</td>
+                                            <td>
+                                                        <code>HTMLElement</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isMac"></a>
+                    <span class="name">
+                        <span ><b>isMac</b></span>
+                        <a href="#isMac"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isMac()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="112"
+                                    class="link-to-prism">src/app/layouts/admin-layout/admin-layout.component.ts:112</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isMaps"></a>
+                    <span class="name">
+                        <span ><b>isMaps</b></span>
+                        <a href="#isMaps"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isMaps(path: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="82"
+                                    class="link-to-prism">src/app/layouts/admin-layout/admin-layout.component.ts:82</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>path</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterViewInit"></a>
+                    <span class="name">
+                        <span ><b>ngAfterViewInit</b></span>
+                        <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterViewInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="78"
+                                    class="link-to-prism">src/app/layouts/admin-layout/admin-layout.component.ts:78</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="22"
+                                    class="link-to-prism">src/app/layouts/admin-layout/admin-layout.component.ts:22</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="runOnRouteChange"></a>
+                    <span class="name">
+                        <span ><b>runOnRouteChange</b></span>
+                        <a href="#runOnRouteChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>runOnRouteChange()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="87"
+                                    class="link-to-prism">src/app/layouts/admin-layout/admin-layout.component.ts:87</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="scrollToTop"></a>
+                    <span class="name">
+                        <span ><b>scrollToTop</b></span>
+                        <a href="#scrollToTop"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>scrollToTop()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="116"
+                                    class="link-to-prism">src/app/layouts/admin-layout/admin-layout.component.ts:116</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_router"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_router</b></span>
+                        <a href="#_router"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Subscription</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/layouts/admin-layout/admin-layout.component.ts:15</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="appName"></a>
+                    <span class="name">
+                        <span ><b>appName</b></span>
+                        <a href="#appName"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/layouts/admin-layout/admin-layout.component.ts:14</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="lastPoppedUrl"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>lastPoppedUrl</b></span>
+                        <a href="#lastPoppedUrl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/layouts/admin-layout/admin-layout.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="location"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>location</b></span>
+                        <a href="#location"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Location</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/layouts/admin-layout/admin-layout.component.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="yScrollStack"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>yScrollStack</b></span>
+                        <a href="#yScrollStack"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>number[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/layouts/admin-layout/admin-layout.component.ts:17</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, AfterViewInit } from &#x27;@angular/core&#x27;;
+import { Location, PopStateEvent } from &#x27;@angular/common&#x27;;
+import { Router, NavigationEnd, NavigationStart } from &#x27;@angular/router&#x27;;
+import { filter, Subscription } from &#x27;rxjs&#x27;;
+import { AppConfigService } from &#x27;../../app-config.service&#x27;;
+import PerfectScrollbar from &#x27;perfect-scrollbar&#x27;;
+
+@Component({
+  selector: &#x27;app-admin-layout&#x27;,
+  templateUrl: &#x27;./admin-layout.component.html&#x27;,
+  styleUrls: [&#x27;./admin-layout.component.scss&#x27;]
+})
+export class AdminLayoutComponent implements OnInit, AfterViewInit {
+  appName: string;
+  private _router: Subscription;
+  private lastPoppedUrl: string;
+  private yScrollStack: number[] &#x3D; [];
+
+
+  constructor(public location: Location, private router: Router, private configService: AppConfigService) {}
+
+  ngOnInit() {
+    this.appName &#x3D; this.configService.getAppName(); // Get app name on component initialization
+    const isWindows &#x3D; navigator.platform.indexOf(&#x27;Win&#x27;) &gt; -1;
+
+    if (isWindows &amp;&amp; !document.getElementsByTagName(&#x27;body&#x27;)[0].classList.contains(&#x27;sidebar-mini&#x27;)) {
+      // If on Windows OS, activate PerfectScrollbar
+      document.getElementsByTagName(&#x27;body&#x27;)[0].classList.add(&#x27;perfect-scrollbar-on&#x27;);
+    } else {
+      document.getElementsByTagName(&#x27;body&#x27;)[0].classList.remove(&#x27;perfect-scrollbar-off&#x27;);
+    }
+
+    const elemMainPanel &#x3D; &lt;HTMLElement&gt;document.querySelector(&#x27;.main-panel&#x27;);
+    const elemSidebar &#x3D; &lt;HTMLElement&gt;document.querySelector(&#x27;.sidebar .sidebar-wrapper&#x27;);
+
+    this.location.subscribe((ev: PopStateEvent) &#x3D;&gt; {
+      this.lastPoppedUrl &#x3D; ev.url;
+    });
+
+    this.router.events.subscribe((event: any) &#x3D;&gt; {
+      if (event instanceof NavigationStart) {
+        if (event.url !&#x3D;&#x3D; this.lastPoppedUrl) {
+          this.yScrollStack.push(window.scrollY);
+        }
+      } else if (event instanceof NavigationEnd) {
+        if (event.url &#x3D;&#x3D;&#x3D; this.lastPoppedUrl) {
+          this.lastPoppedUrl &#x3D; undefined;
+          window.scrollTo(0, this.yScrollStack.pop());
+        } else {
+          window.scrollTo(0, 0);
+        }
+      }
+    });
+
+    this._router &#x3D; this.router.events.pipe(filter(event &#x3D;&gt; event instanceof NavigationEnd)).subscribe(() &#x3D;&gt; {
+      elemMainPanel.scrollTop &#x3D; 0;
+      elemSidebar.scrollTop &#x3D; 0;
+    });
+
+    // Initialize PerfectScrollbar if conditions are met
+    this.initializePerfectScrollbar(elemMainPanel);
+    this.initializePerfectScrollbar(elemSidebar);
+
+    // Scroll to top button functionality
+    window.onscroll &#x3D; () &#x3D;&gt; {
+        const scrollToTopBtn &#x3D; document.getElementById(&#x27;scrollToTopBtn&#x27;);
+        if (scrollToTopBtn) {
+          if (document.body.scrollTop &gt; 200 || document.documentElement.scrollTop &gt; 200) {
+            scrollToTopBtn.classList.add(&#x27;show-scroll&#x27;);
+          } else {
+            scrollToTopBtn.classList.remove(&#x27;show-scroll&#x27;);
+          }
+        }
+      };
+      
+  }
+
+  ngAfterViewInit() {
+    this.runOnRouteChange();
+  }
+
+  isMaps(path: string) {
+    const titlee &#x3D; this.location.prepareExternalUrl(this.location.path());
+    return path !&#x3D;&#x3D; titlee;
+  }
+
+  runOnRouteChange(): void {
+    const elemMainPanel &#x3D; &lt;HTMLElement&gt;document.querySelector(&#x27;.main-panel&#x27;);
+    
+    if (elemMainPanel) {
+      // Proceed only if the main panel exists
+      this.initializePerfectScrollbar(elemMainPanel);
+    } else {
+      console.warn(&#x27;Main panel element not found. Skipping PerfectScrollbar initialization.&#x27;);
+    }
+  }
+
+  initializePerfectScrollbar(element: HTMLElement) {
+    if (element &amp;&amp; window.matchMedia(&#x60;(min-width: 960px)&#x60;).matches &amp;&amp; !this.isMac()) {
+      try {
+        if (!element.getAttribute(&#x27;ps-initialized&#x27;)) {
+          const ps &#x3D; new PerfectScrollbar(element);
+          ps.update();
+          element.setAttribute(&#x27;ps-initialized&#x27;, &#x27;true&#x27;);
+        }
+      } catch (error) {
+        console.error(&#x27;Error initializing PerfectScrollbar:&#x27;, error);
+      }
+    }
+  }
+  
+  isMac(): boolean {
+    return navigator.platform.toUpperCase().indexOf(&#x27;MAC&#x27;) &gt;&#x3D; 0 || navigator.platform.toUpperCase().indexOf(&#x27;IPAD&#x27;) &gt;&#x3D; 0;
+  }
+
+scrollToTop() {
+  const elemMainPanel &#x3D; &lt;HTMLElement&gt;document.querySelector(&#x27;.main-panel&#x27;);
+  if (elemMainPanel) {
+    console.log(&#x27;Scroll to top button clicked - scrolling main panel&#x27;);
+    elemMainPanel.scrollTo({ top: 0, behavior: &#x27;smooth&#x27; });
+  } else {
+    console.log(&#x27;Scroll to top button clicked - scrolling window&#x27;);
+    window.scrollTo({ top: 0, behavior: &#x27;smooth&#x27; });
+  }
+}
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;wrapper&quot;&gt;
+    &lt;div class&#x3D;&quot;sidebar&quot; data-image&#x3D;&quot;./assets/img/sidebar-1.jpg&quot;&gt;
+      &lt;app-sidebar&gt;&lt;/app-sidebar&gt;
+      &lt;div class&#x3D;&quot;sidebar-background&quot; style&#x3D;&quot;background-image: url(./assets/img/sidebar-4.jpg)&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;main-panel&quot;&gt;
+      &lt;app-navbar&gt;&lt;/app-navbar&gt;
+      &lt;router-outlet&gt;&lt;/router-outlet&gt;
+      &lt;div *ngIf&#x3D;&quot;isMaps(&#x27;maps&#x27;)&quot;&gt;
+        &lt;app-footer&gt;&lt;/app-footer&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  
+    &lt;!-- Scroll to Top Button --&gt;
+    &lt;button id&#x3D;&quot;scrollToTopBtn&quot; class&#x3D;&quot;btn btn-primary&quot; (click)&#x3D;&quot;scrollToTop()&quot;&gt;⬆&lt;/button&gt;
+  &lt;/div&gt;
+  </code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./admin-layout.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">/* Wrapper for the entire layout */
+.wrapper {
+    display: flex;
+    flex-direction: row-reverse; /* Sidebar on the right */
+    position: relative;
+    height: 100vh;
+    background-color: #d7dbdf; /* Light grey background */
+    overflow: hidden; /* Prevent unwanted scrollbars */
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px; /* Sidebar width */
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: #556e87; /* Dark blue background color */
+    z-index: 1000;
+    overflow-y: auto; /* Allow scrolling */
+    transition: all 0.3s ease; /* Smooth transition for the sidebar */
+  }
+  
+  .sidebar:hover {
+    width: 260px; /* Expand sidebar slightly on hover */
+    transition: all 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  /* Sidebar logo section */
+  .logo {
+    background-color: #989696; /* Light grey background */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .logo a {
+    color: #fff; /* White text for logo */
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .logo-img img {
+    max-width: 200px;
+    max-height: 150px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Sidebar links */
+  .sidebar-wrapper {
+    padding-right: 0;
+  }
+  
+  .sidebar-wrapper .nav .nav-item {
+    width: 100%; /* Ensure nav items take full width */
+    margin-bottom: 10px; /* Space between each link */
+  }
+  
+  .sidebar-wrapper .nav .nav-item .nav-link {
+    color: #ffffff; /* White text */
+    background-color: #2f70b2; /* Non-active link background */
+    padding: 12px 20px; /* Adjusted padding */
+    border-radius: 12px; /* Rounded corners */
+    text-align: right; /* Align text to the right for RTL */
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .sidebar-wrapper .nav .nav-item .nav-link.active {
+    background-color: #0059b3; /* Active link background */
+    color: #fff;
+    font-weight: bold;
+    border-radius: 12px;
+  }
+  
+  .sidebar-wrapper .nav .nav-item .nav-link:hover {
+    background-color: #4ea3f8; /* Hover effect */
+    color: #fff;
+  }
+  
+  .sidebar-wrapper .nav .nav-item .nav-link i {
+    color: #ffffff; /* White icon */
+    font-size: 18px;
+    margin-left: 10px; /* Space between icon and text */
+  }
+  
+  /* Main content area */
+  .main-panel {
+    flex-grow: 1;
+    margin-right: 250px; /* Adjust to match sidebar width */
+    padding: 20px;
+    text-align: right; /* Align content to the right for RTL */
+    width: calc(100% - 250px); /* Dynamic width based on sidebar */
+    transition: all 0.3s ease; /* Smooth transition for resizing */
+    overflow-y: auto;
+    height: 100vh; /* Full height to allow scrolling */
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    position: relative;
+    right: 250px; /* Align navbar with sidebar */
+    width: calc(100% - 250px); /* Adjust navbar width */
+    z-index: 999;
+  }
+  
+  /* Footer styling */
+  .footer {
+    margin-right: 250px; /* Footer aligned with the sidebar */
+    width: calc(100% - 250px); /* Footer width adjusted to match sidebar */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 991px) {
+    .sidebar {
+      width: 200px; /* Narrower sidebar for smaller screens */
+    }
+  
+    .main-panel {
+      margin-right: 200px; /* Adjust for smaller sidebar */
+      width: calc(100% - 200px); /* Dynamic width adjustment */
+    }
+  
+    .navbar {
+      right: 200px; /* Adjust navbar for smaller sidebar */
+      width: calc(100% - 200px);
+    }
+  
+    .footer {
+      margin-right: 200px; /* Adjust footer for smaller sidebar */
+      width: calc(100% - 200px);
+    }
+  }
+  #scrollToTopBtn {
+    position: fixed;
+    bottom: 30px; /* Distance from the bottom */
+    left: 30px; /* Distance from the left */
+    width: 50px; /* Small size */
+    height: 50px; /* Small size */
+    background-color: #3498db; /* Blue background */
+    border: 2px solid #3498db; /* Blue border */
+    border-radius: 50%; /* Round shape */
+    color: white; /* White text */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000; /* Make sure it&#x27;s on top of other elements */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  }
+  
+  #scrollToTopBtn:hover {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+    box-shadow: 0 0 40px 40px #3498db inset; /* Inset shadow */
+  }
+  
+  
+  #scrollToTopBtn.show-scroll {
+    display: flex; /* Ensure it&#x27;s visible when scrolled */
+  }
+  </code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="wrapper">    <div class="sidebar" data-image="./assets/img/sidebar-1.jpg">      <app-sidebar></app-sidebar>      <div class="sidebar-background" style="background-image: url(./assets/img/sidebar-4.jpg)"></div>    </div>    <div class="main-panel">      <app-navbar></app-navbar>      <router-outlet></router-outlet>      <div *ngIf="isMaps(\'maps\')">        <app-footer></app-footer>      </div>    </div>      <!-- Scroll to Top Button -->    <button id="scrollToTopBtn" class="btn btn-primary" (click)="scrollToTop()">⬆</button>  </div>  </div>'
+    var COMPONENTS = [{'name': 'AddDonationComponent', 'selector': 'app-add-donator'},{'name': 'AddExpenditureComponent', 'selector': 'app-add-expenditure'},{'name': 'AddMemberFormComponent', 'selector': 'app-add-member-form'},{'name': 'AdminLayoutComponent', 'selector': 'app-admin-layout'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContactUsComponent', 'selector': 'app-contact-us'},{'name': 'CreditPledgePaymentComponent', 'selector': 'app-credit-pledge-payment'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DonatorReportSelModalComponent', 'selector': 'app-donator-report-sel-modal'},{'name': 'DonatorsManagingComponent', 'selector': 'app-donators-managing'},{'name': 'DonatorsReportComponent', 'selector': 'app-donators-report'},{'name': 'ExpendituresDisplayComponent', 'selector': 'app-expenditures-display'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'IconsComponent', 'selector': 'app-icons'},{'name': 'InfoPageComponent', 'selector': 'app-info-page'},{'name': 'InvoiceComponent', 'selector': 'app-invoice'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MapsComponent', 'selector': 'app-maps'},{'name': 'MemberAccountPageComponent', 'selector': 'app-member-account-page'},{'name': 'MemberDetailsComponent', 'selector': 'app-member-details'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NotificationsComponent', 'selector': 'app-notifications'},{'name': 'PaginationComponent', 'selector': 'app-pagination'},{'name': 'PaymentComponent', 'selector': 'app-payment'},{'name': 'PaypalButtonComponent', 'selector': 'app-paypal-button'},{'name': 'PledgePaymentComponent', 'selector': 'app-pledge-payment'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'TableListComponent', 'selector': 'app-table-list'},{'name': 'TypographyComponent', 'selector': 'app-typography'},{'name': 'UpgradeComponent', 'selector': 'app-upgrade'},{'name': 'UserManagementComponent', 'selector': 'app-user-management'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'},{'name': 'ZmanimComponent', 'selector': 'app-zmanim'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'AdminLayoutComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'AdminLayoutComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
